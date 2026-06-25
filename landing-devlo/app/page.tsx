@@ -1,423 +1,204 @@
-    body {
-        background-color: #fdfdfd;
-        color: #1a1a1a;
-        overflow-x: hidden;
-        padding: 0 20px;
-    }
+﻿import { Inter } from 'next/font/google';
 
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+const inter = Inter({ subsets: ['latin'] });
 
-    button {
-        cursor: pointer;
-        border: none;
-        outline: none;
-        font-family: inherit;
-    }
+export default function Home() {
+  return (
+    <main className={`${inter.className} page-shell`}>
+      <header className="site-header">
+        <div className="logo">
+          <div className="logo-icon">&lt;/&gt;</div>
+          <div className="logo-copy">
+            <span className="logo-text-primary">dev</span>
+            <span className="logo-text-accent">lo</span>
+          </div>
+        </div>
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+        <nav className="top-nav">
+          <a href="#features">Características</a>
+          <a href="#how-it-works">Cómo funciona</a>
+          <a href="#technologies">Tecnologías</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#faq">FAQ</a>
+        </nav>
 
-    /* --- HEADER / NAV --- */
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 24px 0;
-        margin-bottom: 40px;
-    }
+        <div className="nav-actions">
+          <button className="btn btn-outline">Iniciar sesión</button>
+          <button className="btn btn-primary">Únete a la lista de espera</button>
+        </div>
+      </header>
 
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: 700;
-        font-size: 24px;
-    }
+      <section className="hero">
+        <div className="hero-copy">
+          <span className="badge">LA IA QUE REVISA TU CÓDIGO</span>
+          <h1>
+            Detecta problemas.<br />
+            Mejora tu código.<br />
+            Despliega con <span>confianza</span>.
+          </h1>
+          <p>
+            Devlo es tu auditor de código por IA. Analiza Terraform, Docker y Kubernetes para
+            encontrar problemas de seguridad, rendimiento y buenas prácticas.
+          </p>
 
-    .logo-icon {
-        width: 35px;
-        height: 35px;
-        background: #2563eb;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transform: rotate(5deg);
-    }
+          <div className="hero-actions">
+            <button className="btn btn-primary btn-lg">Únete a la lista de espera →</button>
+            <button className="btn btn-outline btn-lg">▶ Ver cómo funciona</button>
+          </div>
 
-    nav {
-        display: flex;
-        gap: 30px;
-        font-size: 14px;
-        color: #4b5563;
-        font-weight: 500;
-    }
+          <div className="features-mini" id="features">
+            <div className="feature-card">
+              <div className="feature-icon feature-icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2a9 9 0 00-9 9c0 5.3 3.7 9.8 9 11 5.3-1.2 9-5.7 9-11a9 9 0 00-9-9z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              </div>
+              <div>
+                <h4>Seguridad</h4>
+                <p>Detecta vulnerabilidades antes del despliegue.</p>
+              </div>
+            </div>
 
-    .nav-actions {
-        display: flex;
-        gap: 15px;
-    }
+            <div className="feature-card">
+              <div className="feature-icon feature-icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div>
+                <h4>Rendimiento</h4>
+                <p>Mejora la eficiencia de tus despliegues.</p>
+              </div>
+            </div>
 
-    .btn-outline {
-        padding: 10px 20px;
-        border: 1px solid #e5e7eb;
-        background: white;
-        border-radius: 8px;
-        font-weight: 500;
-        color: #1a1a1a;
-        transition: 0.2s;
-    }
+            <div className="feature-card">
+              <div className="feature-icon feature-icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 12l2 2 4-4" />
+                  <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4>Buenas prácticas</h4>
+                <p>Aplica recomendaciones de código confiables.</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    .btn-outline:hover {
-        background: #f3f4f6;
-    }
+        <div className="hero-visual">
+          <div className="dashboard-card">
+            <div className="dashboard-header">
+              <div className="dash-logo">
+                <div className="logo-icon logo-icon-small">&lt;/&gt;</div>
+                <span>dev lo</span>
+              </div>
+              <div className="dash-header-title">Informe de auditoría</div>
+              <div className="dash-status">✓ Análisis completado</div>
+            </div>
 
-    .btn-primary {
-        padding: 10px 24px;
-        background: #2563eb;
-        color: white;
-        border-radius: 8px;
-        font-weight: 500;
-        transition: 0.2s;
-    }
+            <div className="dashboard-layout">
+              <aside className="dash-sidebar">
+                <div className="menu-item active">Resumen</div>
+                <div className="menu-item">
+                  <span>Problemas</span>
+                  <span className="menu-badge red">2</span>
+                </div>
+                <div className="menu-item">
+                  <span>Recomendaciones</span>
+                  <span className="menu-badge yellow">5</span>
+                </div>
+                <div className="menu-item">
+                  <span>Seguridad</span>
+                  <span className="menu-badge yellow">7</span>
+                </div>
+                <div className="menu-item">
+                  <span>Rendimiento</span>
+                  <span className="menu-badge green">3</span>
+                </div>
+                <div className="menu-item">
+                  <span>Buenas prácticas</span>
+                  <span className="menu-badge blue">2</span>
+                </div>
+              </aside>
 
-    .btn-primary:hover {
-        background: #1d4ed8;
-    }
+              <div className="dash-main">
+                <div className="dash-main-header">
+                  <span>Puntuación general</span>
+                </div>
 
-    /* --- HERO SECTION --- */
-    .hero {
-        display: grid;
-        grid-template-columns: 1fr 1.1fr;
-        gap: 60px;
-        align-items: center;
-        margin-bottom: 80px;
-    }
+                <div className="dash-score-section">
+                  <div className="chart-wrapper">
+                    <div className="chart-circle">
+                      <div className="chart-inner">
+                        <span>85</span>
+                        <small>/100</small>
+                      </div>
+                    </div>
+                  </div>
 
-    /* LEFT SIDE - TEXT */
-    .hero-text .badge {
-        display: inline-block;
-        background: #eef2ff;
-        color: #2563eb;
-        padding: 6px 16px;
-        border-radius: 20px;
-        font-size: 13px;
-        font-weight: 600;
-        margin-bottom: 20px;
-    }
+                  <div className="issues-breakdown">
+                    <div className="issue-item"><span><span className="dot critical"></span> Críticos</span><span>2</span></div>
+                    <div className="issue-item"><span><span className="dot high"></span> Altos</span><span>5</span></div>
+                    <div className="issue-item"><span><span className="dot medium"></span> Medios</span><span>7</span></div>
+                    <div className="issue-item"><span><span className="dot low"></span> Bajos</span><span>3</span></div>
+                  </div>
+                </div>
 
-    .hero-text h1 {
-        font-size: 48px;
-        line-height: 1.1;
-        font-weight: 800;
-        color: #111827;
-        margin-bottom: 24px;
-    }
+                <div className="files-section">
+                  <h4>Archivos analizados</h4>
+                  <div className="file-icons">
+                    <div className="file-icon-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7f56d9" strokeWidth="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                      </svg>
+                      main.tf
+                    </div>
+                    <div className="file-icon-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2496ed" strokeWidth="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                      </svg>
+                      docker-compose.yml
+                    </div>
+                    <div className="file-icon-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#326ce5" strokeWidth="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                      </svg>
+                      k8s/deployment.yaml
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-    .hero-text h1 span {
-        color: #2563eb;
-    }
+            <div className="code-card">
+              <div className="code-card-header">Ejemplo de problema detectado</div>
+              <div className="code-content">
+                <span className="code-keyword">resource</span> <span className="code-string">"aws_s3_bucket"</span> <span className="code-string">"data"</span> {'{'}<br />
+                &nbsp;&nbsp;bucket = <span className="code-string">"my-sensitive-data"</span><br />
+                &nbsp;&nbsp;acl &nbsp;&nbsp;&nbsp;= <span className="code-string">"public-read"</span> <span className="code-danger">← Riesgo de seguridad</span><br />
+                {'}'}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    .hero-text p {
-        font-size: 18px;
-        color: #4b5563;
-        line-height: 1.6;
-        margin-bottom: 32px;
-        max-width: 480px;
-    }
-
-    .hero-actions {
-        display: flex;
-        gap: 16px;
-        margin-bottom: 50px;
-    }
-
-    .btn-primary-lg {
-        padding: 14px 28px;
-        background: #2563eb;
-        color: white;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 16px;
-    }
-
-    .btn-outline-lg {
-        padding: 14px 28px;
-        border: 1px solid #e5e7eb;
-        background: white;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .features-mini {
-        display: flex;
-        gap: 30px;
-        flex-wrap: wrap;
-    }
-
-    .feature-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-        max-width: 160px;
-    }
-
-    .feature-item svg {
-        flex-shrink: 0;
-        width: 24px;
-        height: 24px;
-    }
-
-    .feature-item h4 {
-        font-size: 15px;
-        font-weight: 600;
-        margin-bottom: 4px;
-    }
-
-    .feature-item p {
-        font-size: 13px;
-        color: #6b7280;
-        line-height: 1.4;
-    }
-
-    /* RIGHT SIDE - DASHBOARD MOCKUP */
-    .mockup-container {
-        position: relative;
-        padding: 20px;
-    }
-
-    .dashboard-card {
-        background: #15151e;
-        border-radius: 16px;
-        padding: 20px;
-        color: white;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .dashboard-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        border-bottom: 1px solid #2b2b36;
-        padding-bottom: 15px;
-    }
-    .dash-logo { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14px; }
-    .dash-header-title { font-size: 14px; color: #d1d5db; font-weight: 500; }
-    .dash-status { background: #1f2e1f; color: #4ade80; padding: 4px 10px; border-radius: 20px; font-size: 12px; border: 1px solid #2d5235; }
-
-    .dashboard-layout {
-        display: grid;
-        grid-template-columns: 0.8fr 2fr;
-        gap: 20px;
-    }
-
-    /* Sidebar */
-    .dash-sidebar {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-    }
-
-    .menu-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 8px 12px;
-        border-radius: 8px;
-        font-size: 12px;
-        color: #9ca3af;
-    }
-
-    .menu-item.active {
-        background: #2b2b36;
-        color: white;
-    }
-
-    .menu-badge {
-        width: 16px;
-        height: 16px;
-        background: #ef4444;
-        border-radius: 50%;
-        font-size: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-    }
-    .menu-badge.yellow { background: #f59e0b; }
-    .menu-badge.green { background: #22c55e; }
-    .menu-badge.blue { background: #3b82f6; }
-
-    /* Main Panel */
-    .dash-main {
-        background: #1f1f29;
-        border-radius: 12px;
-        padding: 16px;
-    }
-
-    .dash-main-header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 15px;
-        font-size: 13px;
-        color: #d1d5db;
-    }
-
-    .dash-score-section {
-        display: flex;
-        align-items: center;
-        gap: 30px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #2b2b36;
-        margin-bottom: 20px;
-    }
-
-    /* CSS Circle Chart */
-    .chart-wrapper {
-        position: relative;
-        width: 80px;
-        height: 80px;
-    }
-    .chart-circle {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background: conic-gradient(#22c55e 0% 85%, #3f3f4e 85% 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .chart-inner {
-        width: 60px;
-        height: 60px;
-        background: #1f1f29;
-        border-radius: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .chart-inner span { font-size: 18px; font-weight: 700; }
-    .chart-inner small { font-size: 8px; color: #9ca3af; }
-
-    .issues-breakdown {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 20px;
-        row-gap: 6px;
-        font-size: 11px;
-    }
-    .issue-item {
-        display: flex;
-        justify-content: space-between;
-        color: #9ca3af;
-    }
-    .issue-item span:first-child { display: flex; align-items: center; gap: 6px; }
-    .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
-    .dot.critical { background: #ef4444; }
-    .dot.high { background: #f59e0b; }
-    .dot.medium { background: #eab308; }
-    .dot.low { background: #22c55e; }
-
-    .files-section {
-        margin-top: 10px;
-    }
-    .files-section h4 { font-size: 12px; color: #9ca3af; margin-bottom: 8px; }
-    .file-icons { display: flex; gap: 15px; font-size: 11px; color: #9ca3af; align-items: center; }
-    .file-icon-item { display: flex; align-items: center; gap: 5px; }
-
-    /* Floating Code Card */
-    .code-card {
-        position: absolute;
-        bottom: -70px;
-        right: 30px;
-        width: 350px;
-        background: #1a1a24;
-        border-radius: 12px;
-        padding: 16px;
-        border: 1px solid #2b2b36;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    }
-    .code-card-header { font-size: 11px; color: #d1d5db; margin-bottom: 10px; }
-    .code-content { font-family: monospace; font-size: 11px; color: #d1d5db; line-height: 1.6; }
-    .code-keyword { color: #f472b6; }
-    .code-string { color: #fbbf24; }
-    .code-function { color: #60a5fa; }
-    .code-comment { color: #6b7280; }
-    .code-danger { color: #f87171; background: rgba(239, 68, 68, 0.1); padding: 2px 4px; border-radius: 4px; }
-
-    /* --- TRUST SECTION --- */
-    .trust-section {
-        text-align: center;
-        padding: 60px 0 40px 0;
-        border-top: 1px solid #f3f4f6;
-    }
-    .trust-section p {
-        font-size: 14px;
-        font-weight: 600;
-        color: #6b7280;
-        letter-spacing: 1px;
-        margin-bottom: 30px;
-    }
-    .tech-logos {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 40px;
-        align-items: center;
-    }
-    .tech-logos span {
-        font-weight: 600;
-        color: #1f2937;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    .tech-logos span svg {
-        width: 24px;
-        height: 24px;
-    }
-    .tech-color { color: #7f56d9; } /* terraform */
-    .tech-docker { color: #2496ed; }
-    .tech-k8s { color: #326ce5; }
-    .tech-aws { color: #ff9900; }
-    .tech-google { color: #4285f4; }
-    .tech-azure { color: #0078d4; }
-
-    /* --- RESPONSIVE --- */
-    @media (max-width: 1024px) {
-        .hero {
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-        .mockup-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        nav { display: none; }
-        .code-card { display: none; } /* Hide extra code card on small screens */
-    }
-    @media (max-width: 600px) {
-        .hero-text h1 { font-size: 32px; }
-        .dashboard-layout { grid-template-columns: 1fr; }
-        .hero-actions { flex-direction: column; }
-        .features-mini { flex-direction: column; }
-    }
-</style>
+      <section className="trust-section" id="technologies">
+        <p>CONFIADO POR DESARROLLADORES QUE USAN</p>
+        <div className="tech-logos">
+          <span className="tech-chip terra">Terraform</span>
+          <span className="tech-chip docker">Docker</span>
+          <span className="tech-chip k8s">Kubernetes</span>
+          <span className="tech-chip aws">AWS</span>
+          <span className="tech-chip google">Google Cloud</span>
+          <span className="tech-chip azure">Azure</span>
+        </div>
+      </section>
+    </main>
+  );
+}
