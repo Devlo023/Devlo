@@ -8,9 +8,8 @@ export default function Home() {
         </div>
 
         <h1 className="text-6xl font-bold tracking-tight mb-8">
-          Audit your infrastructure
-          <br />
-          before deployment.
+          Catch infrastructure mistakes
+before they reach production.
         </h1>
 
         <p className="text-xl text-zinc-600 max-w-3xl mx-auto mb-10">
@@ -83,6 +82,34 @@ export default function Home() {
       </section>
 
       {/* Solution */}
+      <section className="max-w-6xl mx-auto px-6 py-24">
+  <h2 className="text-4xl font-bold text-center mb-12">
+    How Devlo Works
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-8">
+    <div className="bg-white p-8 rounded-2xl shadow-sm">
+      <h3 className="font-bold text-xl mb-3">1. Upload</h3>
+      <p className="text-zinc-600">
+        Upload Terraform, Docker, Kubernetes, YAML or JSON files.
+      </p>
+    </div>
+
+    <div className="bg-white p-8 rounded-2xl shadow-sm">
+      <h3 className="font-bold text-xl mb-3">2. Analyze</h3>
+      <p className="text-zinc-600">
+        Devlo reviews security risks, misconfigurations and cloud costs.
+      </p>
+    </div>
+
+    <div className="bg-white p-8 rounded-2xl shadow-sm">
+      <h3 className="font-bold text-xl mb-3">3. Fix</h3>
+      <p className="text-zinc-600">
+        Receive clear recommendations before deployment.
+      </p>
+    </div>
+  </div>
+</section>
       <section className="bg-white py-24">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12">
@@ -113,7 +140,20 @@ export default function Home() {
           </div>
         </div>
       </section>
+<section className="bg-white py-24">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    <h2 className="text-4xl font-bold mb-10">
+      Built on trusted standards
+    </h2>
 
+    <div className="grid md:grid-cols-4 gap-6">
+      <div className="border rounded-xl p-6">CIS Benchmarks</div>
+      <div className="border rounded-xl p-6">NIST Guidelines</div>
+      <div className="border rounded-xl p-6">DevSecOps Best Practices</div>
+      <div className="border rounded-xl p-6">Infrastructure as Code</div>
+    </div>
+  </div>
+</section>
       {/* Pricing */}
       <section className="max-w-6xl mx-auto px-6 py-24">
         <h2 className="text-4xl font-bold text-center mb-12">
@@ -142,7 +182,40 @@ export default function Home() {
           </div>
         </div>
       </section>
+<section className="max-w-5xl mx-auto px-6 py-24">
+  <h2 className="text-4xl font-bold text-center mb-12">
+    Frequently Asked Questions
+  </h2>
 
+  <div className="space-y-8">
+    <div>
+      <h3 className="font-bold text-xl">
+        Does Devlo store my files?
+      </h3>
+      <p className="text-zinc-600">
+        No. Files are processed temporarily and not retained.
+      </p>
+    </div>
+
+    <div>
+      <h3 className="font-bold text-xl">
+        Which formats are supported?
+      </h3>
+      <p className="text-zinc-600">
+        Terraform, Docker, Kubernetes, YAML and JSON.
+      </p>
+    </div>
+
+    <div>
+      <h3 className="font-bold text-xl">
+        Is there an Enterprise version?
+      </h3>
+      <p className="text-zinc-600">
+        Yes. Private deployments are available.
+      </p>
+    </div>
+  </div>
+</section>
       {/* Footer CTA */}
       <section className="bg-[#18181B] text-white py-24 text-center">
         <h2 className="text-4xl font-bold mb-6">
