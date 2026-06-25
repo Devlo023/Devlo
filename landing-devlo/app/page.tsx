@@ -1,239 +1,423 @@
-export default function Home() {
-  return (
-    <main className="bg-[#FAFAFA] text-[#18181B] min-h-screen">
-      {/* Hero */}
-      <section className="max-w-6xl mx-auto px-6 py-32 text-center">
-        <div className="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium mb-8">
-          AI Infrastructure Security Auditing
-        </div>
+    body {
+        background-color: #fdfdfd;
+        color: #1a1a1a;
+        overflow-x: hidden;
+        padding: 0 20px;
+    }
 
-        <h1 className="text-6xl font-bold tracking-tight mb-8">
-          Catch infrastructure mistakes
-before they reach production.
-        </h1>
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 
-        <p className="text-xl text-zinc-600 max-w-3xl mx-auto mb-10">
-          Detect security risks, cloud misconfigurations and deployment issues
-          in Terraform, Docker and Kubernetes before they reach production.
-        </p>
+    button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-family: inherit;
+    }
 
-        <div className="flex justify-center gap-4">
-         <a
-  href="https://tally.so/r/MePolA"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition inline-block"
->
-  Join the Waitlist
-</a>
-<a
-  href="https://tally.so/r/MePolA"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-blue-600 px-8 py-4 rounded-xl font-semibold inline-block"
->
-  Join Now
-</a>
-        </div>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-        <div className="mt-12 text-zinc-500">
-          Built for Developers, DevOps Engineers and CTOs.
-        </div>
-      </section>
+    /* --- HEADER / NAV --- */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 0;
+        margin-bottom: 40px;
+    }
 
-      {/* Problem */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <h2 className="text-4xl font-bold mb-12 text-center">
-          Infrastructure mistakes are expensive.
-        </h2>
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 24px;
+    }
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
-            <h3 className="font-bold text-xl mb-3">
-              Security Risks
-            </h3>
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+        background: #2563eb;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transform: rotate(5deg);
+    }
 
-            <p className="text-zinc-600">
-              Exposed ports, weak permissions and insecure defaults can become
-              critical vulnerabilities.
-            </p>
-          </div>
+    nav {
+        display: flex;
+        gap: 30px;
+        font-size: 14px;
+        color: #4b5563;
+        font-weight: 500;
+    }
 
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
-            <h3 className="font-bold text-xl mb-3">
-              Cloud Costs
-            </h3>
+    .nav-actions {
+        display: flex;
+        gap: 15px;
+    }
 
-            <p className="text-zinc-600">
-              Poor infrastructure decisions generate unnecessary cloud spending.
-            </p>
-          </div>
+    .btn-outline {
+        padding: 10px 20px;
+        border: 1px solid #e5e7eb;
+        background: white;
+        border-radius: 8px;
+        font-weight: 500;
+        color: #1a1a1a;
+        transition: 0.2s;
+    }
 
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
-            <h3 className="font-bold text-xl mb-3">
-              Downtime
-            </h3>
+    .btn-outline:hover {
+        background: #f3f4f6;
+    }
 
-            <p className="text-zinc-600">
-              Small configuration errors can break production deployments.
-            </p>
-          </div>
-        </div>
-      </section>
+    .btn-primary {
+        padding: 10px 24px;
+        background: #2563eb;
+        color: white;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: 0.2s;
+    }
 
-      {/* Solution */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
-  <h2 className="text-4xl font-bold text-center mb-12">
-    How Devlo Works
-  </h2>
+    .btn-primary:hover {
+        background: #1d4ed8;
+    }
 
-  <div className="grid md:grid-cols-3 gap-8">
-    <div className="bg-white p-8 rounded-2xl shadow-sm">
-      <h3 className="font-bold text-xl mb-3">1. Upload</h3>
-      <p className="text-zinc-600">
-        Upload Terraform, Docker, Kubernetes, YAML or JSON files.
-      </p>
-    </div>
+    /* --- HERO SECTION --- */
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 60px;
+        align-items: center;
+        margin-bottom: 80px;
+    }
 
-    <div className="bg-white p-8 rounded-2xl shadow-sm">
-      <h3 className="font-bold text-xl mb-3">2. Analyze</h3>
-      <p className="text-zinc-600">
-        Devlo reviews security risks, misconfigurations and cloud costs.
-      </p>
-    </div>
+    /* LEFT SIDE - TEXT */
+    .hero-text .badge {
+        display: inline-block;
+        background: #eef2ff;
+        color: #2563eb;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
 
-    <div className="bg-white p-8 rounded-2xl shadow-sm">
-      <h3 className="font-bold text-xl mb-3">3. Fix</h3>
-      <p className="text-zinc-600">
-        Receive clear recommendations before deployment.
-      </p>
-    </div>
-  </div>
-</section>
-      <section className="bg-white py-24">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12">
-            Built for engineers who need answers.
-          </h2>
+    .hero-text h1 {
+        font-size: 48px;
+        line-height: 1.1;
+        font-weight: 800;
+        color: #111827;
+        margin-bottom: 24px;
+    }
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="border rounded-2xl p-8">
-              <h3 className="font-bold text-2xl mb-4">
-                Upload Infrastructure Files
-              </h3>
+    .hero-text h1 span {
+        color: #2563eb;
+    }
 
-              <p className="text-zinc-600">
-                Terraform, Docker, Kubernetes, YAML and JSON configurations.
-              </p>
-            </div>
+    .hero-text p {
+        font-size: 18px;
+        color: #4b5563;
+        line-height: 1.6;
+        margin-bottom: 32px;
+        max-width: 480px;
+    }
 
-            <div className="border rounded-2xl p-8">
-              <h3 className="font-bold text-2xl mb-4">
-                Receive an Audit
-              </h3>
+    .hero-actions {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 50px;
+    }
 
-              <p className="text-zinc-600">
-                Security findings, best practices and cloud optimization
-                recommendations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-<section className="bg-white py-24">
-  <div className="max-w-6xl mx-auto px-6 text-center">
-    <h2 className="text-4xl font-bold mb-10">
-      Built on trusted standards
-    </h2>
+    .btn-primary-lg {
+        padding: 14px 28px;
+        background: #2563eb;
+        color: white;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+    }
 
-    <div className="grid md:grid-cols-4 gap-6">
-      <div className="border rounded-xl p-6">CIS Benchmarks</div>
-      <div className="border rounded-xl p-6">NIST Guidelines</div>
-      <div className="border rounded-xl p-6">DevSecOps Best Practices</div>
-      <div className="border rounded-xl p-6">Infrastructure as Code</div>
-    </div>
-  </div>
-</section>
-      {/* Pricing */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          Pricing
-        </h2>
+    .btn-outline-lg {
+        padding: 14px 28px;
+        border: 1px solid #e5e7eb;
+        background: white;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-2xl p-8 shadow-sm">
-            <h3 className="font-bold text-2xl mb-2">Free</h3>
-            <p className="text-zinc-600">
-              Limited technical conversations.
-            </p>
-          </div>
+    .features-mini {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
 
-          <div className="bg-blue-600 text-white rounded-2xl p-8">
-            <h3 className="font-bold text-2xl mb-2">Pro</h3>
-            <p className="text-4xl font-bold mb-4">€14.99</p>
-            <p>Infrastructure auditing and file analysis.</p>
-          </div>
+    .feature-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        max-width: 160px;
+    }
 
-          <div className="bg-white rounded-2xl p-8 shadow-sm">
-            <h3 className="font-bold text-2xl mb-2">Enterprise</h3>
-            <p className="text-zinc-600">
-              Private deployment and full compliance.
-            </p>
-          </div>
-        </div>
-      </section>
-<section className="max-w-5xl mx-auto px-6 py-24">
-  <h2 className="text-4xl font-bold text-center mb-12">
-    Frequently Asked Questions
-  </h2>
+    .feature-item svg {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+    }
 
-  <div className="space-y-8">
-    <div>
-      <h3 className="font-bold text-xl">
-        Does Devlo store my files?
-      </h3>
-      <p className="text-zinc-600">
-        No. Files are processed temporarily and not retained.
-      </p>
-    </div>
+    .feature-item h4 {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
 
-    <div>
-      <h3 className="font-bold text-xl">
-        Which formats are supported?
-      </h3>
-      <p className="text-zinc-600">
-        Terraform, Docker, Kubernetes, YAML and JSON.
-      </p>
-    </div>
+    .feature-item p {
+        font-size: 13px;
+        color: #6b7280;
+        line-height: 1.4;
+    }
 
-    <div>
-      <h3 className="font-bold text-xl">
-        Is there an Enterprise version?
-      </h3>
-      <p className="text-zinc-600">
-        Yes. Private deployments are available.
-      </p>
-    </div>
-  </div>
-</section>
-      {/* Footer CTA */}
-      <section className="bg-[#18181B] text-white py-24 text-center">
-        <h2 className="text-4xl font-bold mb-6">
-          Join the Devlo waitlist
-        </h2>
+    /* RIGHT SIDE - DASHBOARD MOCKUP */
+    .mockup-container {
+        position: relative;
+        padding: 20px;
+    }
 
-        <p className="text-zinc-400 mb-8">
-          Be among the first to access Devlo.
-        </p>
-<a
-  href="https://tally.so/r/MePolA"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-blue-600 px-8 py-4 rounded-xl font-semibold inline-block"
->
-  Join Now
-</a>
-      </section>
-    </main>
-  );
-}
+    .dashboard-card {
+        background: #15151e;
+        border-radius: 16px;
+        padding: 20px;
+        color: white;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #2b2b36;
+        padding-bottom: 15px;
+    }
+    .dash-logo { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14px; }
+    .dash-header-title { font-size: 14px; color: #d1d5db; font-weight: 500; }
+    .dash-status { background: #1f2e1f; color: #4ade80; padding: 4px 10px; border-radius: 20px; font-size: 12px; border: 1px solid #2d5235; }
+
+    .dashboard-layout {
+        display: grid;
+        grid-template-columns: 0.8fr 2fr;
+        gap: 20px;
+    }
+
+    /* Sidebar */
+    .dash-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .menu-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-size: 12px;
+        color: #9ca3af;
+    }
+
+    .menu-item.active {
+        background: #2b2b36;
+        color: white;
+    }
+
+    .menu-badge {
+        width: 16px;
+        height: 16px;
+        background: #ef4444;
+        border-radius: 50%;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    .menu-badge.yellow { background: #f59e0b; }
+    .menu-badge.green { background: #22c55e; }
+    .menu-badge.blue { background: #3b82f6; }
+
+    /* Main Panel */
+    .dash-main {
+        background: #1f1f29;
+        border-radius: 12px;
+        padding: 16px;
+    }
+
+    .dash-main-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        font-size: 13px;
+        color: #d1d5db;
+    }
+
+    .dash-score-section {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #2b2b36;
+        margin-bottom: 20px;
+    }
+
+    /* CSS Circle Chart */
+    .chart-wrapper {
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+    .chart-circle {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: conic-gradient(#22c55e 0% 85%, #3f3f4e 85% 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .chart-inner {
+        width: 60px;
+        height: 60px;
+        background: #1f1f29;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .chart-inner span { font-size: 18px; font-weight: 700; }
+    .chart-inner small { font-size: 8px; color: #9ca3af; }
+
+    .issues-breakdown {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 6px;
+        font-size: 11px;
+    }
+    .issue-item {
+        display: flex;
+        justify-content: space-between;
+        color: #9ca3af;
+    }
+    .issue-item span:first-child { display: flex; align-items: center; gap: 6px; }
+    .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+    .dot.critical { background: #ef4444; }
+    .dot.high { background: #f59e0b; }
+    .dot.medium { background: #eab308; }
+    .dot.low { background: #22c55e; }
+
+    .files-section {
+        margin-top: 10px;
+    }
+    .files-section h4 { font-size: 12px; color: #9ca3af; margin-bottom: 8px; }
+    .file-icons { display: flex; gap: 15px; font-size: 11px; color: #9ca3af; align-items: center; }
+    .file-icon-item { display: flex; align-items: center; gap: 5px; }
+
+    /* Floating Code Card */
+    .code-card {
+        position: absolute;
+        bottom: -70px;
+        right: 30px;
+        width: 350px;
+        background: #1a1a24;
+        border-radius: 12px;
+        padding: 16px;
+        border: 1px solid #2b2b36;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+    .code-card-header { font-size: 11px; color: #d1d5db; margin-bottom: 10px; }
+    .code-content { font-family: monospace; font-size: 11px; color: #d1d5db; line-height: 1.6; }
+    .code-keyword { color: #f472b6; }
+    .code-string { color: #fbbf24; }
+    .code-function { color: #60a5fa; }
+    .code-comment { color: #6b7280; }
+    .code-danger { color: #f87171; background: rgba(239, 68, 68, 0.1); padding: 2px 4px; border-radius: 4px; }
+
+    /* --- TRUST SECTION --- */
+    .trust-section {
+        text-align: center;
+        padding: 60px 0 40px 0;
+        border-top: 1px solid #f3f4f6;
+    }
+    .trust-section p {
+        font-size: 14px;
+        font-weight: 600;
+        color: #6b7280;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+    .tech-logos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+    }
+    .tech-logos span {
+        font-weight: 600;
+        color: #1f2937;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .tech-logos span svg {
+        width: 24px;
+        height: 24px;
+    }
+    .tech-color { color: #7f56d9; } /* terraform */
+    .tech-docker { color: #2496ed; }
+    .tech-k8s { color: #326ce5; }
+    .tech-aws { color: #ff9900; }
+    .tech-google { color: #4285f4; }
+    .tech-azure { color: #0078d4; }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 1024px) {
+        .hero {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        .mockup-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        nav { display: none; }
+        .code-card { display: none; } /* Hide extra code card on small screens */
+    }
+    @media (max-width: 600px) {
+        .hero-text h1 { font-size: 32px; }
+        .dashboard-layout { grid-template-columns: 1fr; }
+        .hero-actions { flex-direction: column; }
+        .features-mini { flex-direction: column; }
+    }
+</style>
