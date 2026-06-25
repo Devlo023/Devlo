@@ -19,13 +19,22 @@ export default function Home() {
         </p>
 
         <div className="flex justify-center gap-4">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition">
-            Join the Waitlist
-          </button>
-
-          <button className="border border-zinc-300 px-8 py-4 rounded-xl font-semibold">
-            Read Whitepaper
-          </button>
+         <a
+  href="https://tally.so/r/MePolA"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition inline-block"
+>
+  Join the Waitlist
+</a>
+<a
+  href="https://tally.so/r/MePolA"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-blue-600 px-8 py-4 rounded-xl font-semibold inline-block"
+>
+  Join Now
+</a>
         </div>
 
         <div className="mt-12 text-zinc-500">
@@ -143,10 +152,14 @@ export default function Home() {
         <p className="text-zinc-400 mb-8">
           Be among the first to access Devlo.
         </p>
-
-        <button className="bg-blue-600 px-8 py-4 rounded-xl font-semibold">
-          Join Now
-        </button>
+<a
+  href="https://tally.so/r/MePolA"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-blue-600 px-8 py-4 rounded-xl font-semibold inline-block"
+>
+  Join Now
+</a>
       </section>
     </main>
   );
