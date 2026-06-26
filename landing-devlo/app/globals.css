@@ -196,7 +196,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: 60px;
-  align-items: center;
+  align-items: start;
   margin-bottom: 80px;
 }
 
@@ -257,11 +257,10 @@ button {
 
 .feature-card {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-start;
   gap: 14px;
-  flex: 1 1 220px;
-  min-height: 190px;
+  max-width: 220px;
+  min-height: 170px;
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 18px;
@@ -294,10 +293,12 @@ button {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .dashboard-card {
   position: relative;
+  margin-top: -24px;
   width: 100%;
   max-width: 680px;
   background: #111318;
