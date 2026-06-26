@@ -23,7 +23,7 @@ export default function Home() {
         </nav>
 
         <div className="nav-actions">
-          <button className="btn btn-outline">Iniciar sesión</button>
+          <a className="btn btn-outline" href="/login">Iniciar sesión</a>
           <a className="btn btn-primary" href="https://tally.so/r/MePolA" target="_blank" rel="noreferrer">Únete a la lista de espera</a>
         </div>
       </header>
