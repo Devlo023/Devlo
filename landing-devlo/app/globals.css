@@ -290,9 +290,13 @@ button {
 }
 
 .hero-visual {
-    background: red !important;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 120px;
+    background: transparent !important;
 }
-
 
 .dashboard-card {
   position: relative;
