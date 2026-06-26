@@ -42,7 +42,7 @@ export default function Home() {
           </p>
 
           <div className="hero-actions">
-            <a className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition" href="https://tally.so/r/MePolA" target="_blank" rel="noreferrer">
+            <a className="btn btn-primary" href="https://tally.so/r/MePolA" target="_blank" rel="noreferrer">
               Únete a la lista de espera
             </a>
             <button className="btn btn-outline btn-lg">▶ Ver cómo funciona</button>
