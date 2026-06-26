@@ -48,45 +48,6 @@ export default function Home() {
             <button className="btn btn-outline btn-lg">▶ Ver cómo funciona</button>
           </div>
 
-          <div className="features-mini" id="features">
-            <div className="feature-card">
-              <div className="feature-icon feature-icon-blue">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2a9 9 0 00-9 9c0 5.3 3.7 9.8 9 11 5.3-1.2 9-5.7 9-11a9 9 0 00-9-9z" />
-                  <path d="M9 12l2 2 4-4" />
-                </svg>
-              </div>
-              <div>
-                <h4>Seguridad</h4>
-                <p>Detecta vulnerabilidades antes del despliegue.</p>
-              </div>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon feature-icon-blue">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <div>
-                <h4>Rendimiento</h4>
-                <p>Mejora la eficiencia de tus despliegues.</p>
-              </div>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon feature-icon-blue">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M9 12l2 2 4-4" />
-                  <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <div>
-                <h4>Buenas prácticas</h4>
-                <p>Aplica recomendaciones de código confiables.</p>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="hero-visual">
@@ -185,6 +146,46 @@ export default function Home() {
                 &nbsp;&nbsp;acl &nbsp;&nbsp;&nbsp;= <span className="code-string">"public-read"</span> <span className="code-danger">← Riesgo de seguridad</span><br />
                 {'}'}
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="features-mini" id="features">
+          <div className="feature-card">
+            <div className="feature-icon feature-icon-blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2a9 9 0 00-9 9c0 5.3 3.7 9.8 9 11 5.3-1.2 9-5.7 9-11a9 9 0 00-9-9z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+            </div>
+            <div>
+              <h4>Seguridad</h4>
+              <p>Detecta vulnerabilidades antes del despliegue.</p>
+            </div>
+          </div>
+
+          <div className="feature-card">
+            <div className="feature-icon feature-icon-blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <div>
+              <h4>Rendimiento</h4>
+              <p>Mejora la eficiencia de tus despliegues.</p>
+            </div>
+          </div>
+
+          <div className="feature-card">
+            <div className="feature-icon feature-icon-blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 12l2 2 4-4" />
+                <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h4>Buenas prácticas</h4>
+              <p>Aplica recomendaciones de código confiables.</p>
             </div>
           </div>
         </div>
