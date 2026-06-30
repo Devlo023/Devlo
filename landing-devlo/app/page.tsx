@@ -22,12 +22,16 @@ export default function Home() {
           <a href="#faq">FAQ</a>
         </nav>
 
-        <div className="nav-actions">
-          <a className="btn btn-outline" href="/login">Iniciar sesión</a>
-          <a className="btn btn-primary" href="https://tally.so/r/MePolA" target="_blank" rel="noreferrer">Únete a la lista de espera</a>
-        </div>
-      </header>
+       <div className="nav-actions">
+  <a className="btn btn-outline" href="/login">
+    Iniciar sesión
+  </a>
 
+  <a className="btn btn-primary" href="/register">
+    Crear cuenta
+  </a>
+</div>
+</header>
       <section className="hero">
         <div className="hero-copy">
           <span className="badge">LA IA QUE REVISA TU CÓDIGO</span>
@@ -45,7 +49,9 @@ export default function Home() {
             <a className="btn btn-primary" href="https://tally.so/r/MePolA" target="_blank" rel="noreferrer">
               Únete a la lista de espera
             </a>
-            <button className="btn btn-outline btn-lg">▶ Ver cómo funciona</button>
+            <a className="btn btn-outline btn-lg" href="/devlo">
+              ▶ Ver demo
+            </a>
           </div>
 
         </div>
@@ -148,9 +154,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+                       </div>
 
-        <div className="features-mini" id="features">
+      <div className="features-mini" id="features">
           <div className="feature-card">
             <div className="feature-icon feature-icon-blue">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devlo Interface</title>
+    <link rel="stylesheet" href="styles/devlo-interface.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Plataforma de auditoría</p>
+        <h1># devlo</h1>
+      </header>
+
+      <section class="card upload-card">
+        <div class="card-header">
+          <h2>Tú proyectos</h2>
+          <span class="pill">Arrastra y suelta</span>
+        </div>
+
+        <div class="dropzone" id="dropzone" tabindex="0">
+          <input id="fileInput" type="file" multiple accept=".zip,.tar.gz,.tgz" hidden />
+          <div class="dropzone-icon">📦</div>
+          <p class="dropzone-title">Suelta tus archivos aquí</p>
+          <p class="dropzone-subtitle">Acepta archivos .zip, .tar.gz y .tgz</p>
+          <button class="primary-btn" id="selectFilesBtn" type="button">Seleccionar archivos</button>
+        </div>
+
+        <ul id="fileList" class="file-list">
+          <li class="file-empty">Aún no se han añadido archivos.</li>
+        </ul>
+      </section>
+
+      <section class="card ai-card">
+        <div class="card-header">
+          <h2>Devolo AI</h2>
+          <span class="pill accent">Activo</span>
+        </div>
+
+        <p class="ai-copy">Tu asistente de auditoría y análisis de código</p>
+        <div class="assistant-bubble">👋 Hola, soy Devlo AI. Estoy listo para revisar tu proyecto.</div>
+        <textarea id="messageInput" placeholder="Escribe tu mensaje..."></textarea>
+      </section>
+
+      <p class="notice">
+        Devlo AI puede comenzar errores. Verifica siempre la información importante.
+      </p>
+
+      <div class="actions">
+        <button class="action-btn">Descargar ediciones</button>
+        <button class="action-btn">Buscar</button>
+        <button class="action-btn">Comentar</button>
+        <button class="action-btn">Relación de aspecto</button>
+        <button class="action-btn">Compartir</button>
+      </div>
+    </main>
+
+    <script src="scripts/devlo-interface.js"></script>
+  </body>
+</html>
